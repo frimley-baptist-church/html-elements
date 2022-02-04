@@ -88,7 +88,7 @@
         }
     })
 
-    bbc.addDependentScripts(jsToAdd)
+    fbc.addDependentScripts(jsToAdd)
 })()
 
 customElements.define(
