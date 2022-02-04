@@ -1,0 +1,306 @@
+:root, :host{
+  --fbc-blue: #3f9cd2;
+  --fbc-cyan: #1ca0e682;
+}
+
+/* CSS reset 2020 https://dev.to/hankchizljaw/a-modern-css-reset-6p3 */
+/* Box sizing rules */
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "ReithSans" !important;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: calc(100vh - 51px);
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* NEWSLABS specifics */
+/* Putting your content inside <main></main> will make it avoid <bbc-newslabs-header> and <bbc-newslabs-footer> elements. */
+main{
+    margin-top: 51px;
+    padding: 1em;
+    margin-bottom: 41px;
+}
+
+/* Import Reith fonts*/
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Rg.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-style: italic;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_It.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_It.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-weight: bold;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Bd.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_BdIt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-weight: 300;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Lt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Lt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_LtIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_LtIt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-weight: 500;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Md.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_Md.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_MdIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_MdIt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-weight: 800;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_ExBd.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_ExBd.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSans";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_ExBdIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSans_W_ExBdIt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Rg.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Rg.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-style: italic;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_It.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_It.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-weight: bold;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Bd.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Bd.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_BdIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_BdIt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-weight: 300;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Lt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Lt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_LtIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_LtIt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-weight: 500;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_Md.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_MdIt.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-weight: 800;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_ExBd.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_ExBd.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ReithSerif";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_ExBdIt.woff2") format("woff2"),
+  url("https://gel.files.bbci.co.uk/r2.511/BBCReithSerif_W_ExBdIt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Virgil";
+  src: url("https://bbc.github.io/newslabs-elements/Virgil.woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "BBC Reith Qalam";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://static.files.bbci.co.uk/fonts/reith-qalam/1.100/BBCReithQalam_W_Bd.woff2") format("woff2"),
+  url("https://static.files.bbci.co.uk/fonts/reith-qalam/1.100/BBCReithQalam_W_Bd.woff") format("woff");
+  _font-display: optional
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "BBC Reith Qalam";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://static.files.bbci.co.uk/fonts/reith-qalam/1.100/BBCReithQalam_W_Rg.woff2") format("woff2"),
+  url("https://static.files.bbci.co.uk/fonts/reith-qalam/1.100/BBCReithQalam_W_Rg.woff") format("woff");
+  _font-display: optional
+}
+
+
+/* these need <html class=newslabs-bootstrap> to activate them */
+.bootstrap .btn {
+  padding: 0.375rem .75rem 0.175em;
+}
+
+.bootstrap .btn-outline-primary {
+  color: var(--fbc-blue);
+  border-color: var(--fbc-cyan);
+}
+
+.bootstrap .btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--fbc-blue);
+  border-color: var(--fbc-cyan);
+}
