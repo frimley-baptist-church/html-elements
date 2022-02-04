@@ -14,7 +14,7 @@
     // Used to send messages between distinct components on a page, regardless of component technology used.
     // - https://pineco.de/creating-a-javascript-event-bus/ (general concept)
     // - https://stackoverflow.com/a/34418446/7656091 : private data (bus inside the constructor method), and public methods (also inside the constructor, but prefixed with this.)
-    bbc.EventBus = new class {
+    fbc.EventBus = new class {
         constructor() {
             const bus = document.createElement('FBC-EventBus')
             this.addEventListener = function(event, callback) {
@@ -30,7 +30,7 @@
     }
 
     // Dynamic JS dependency-stack injection - https://stackoverflow.com/a/62969633/7656091
-    bbc.addDependentScripts = async function (scriptsToAdd) {
+    fbc.addDependentScripts = async function (scriptsToAdd) {
         const s = document.createElement('script')
         for (var i = 0; i < scriptsToAdd.length; i++) {
             let r = await fetch(scriptsToAdd[i])
