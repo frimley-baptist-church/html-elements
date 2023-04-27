@@ -222,6 +222,26 @@ div.proto{
     height: 80%;
     margin: 10% auto;
 }
+span.buttons{
+    float: right;
+}
+button{
+    background-color: white;
+    height: 1.7em;
+    display: inline-block;
+    line-height: 1.5em;
+    font-size: 12pt;
+    padding: 0 1ch;
+    margin-left: 1em;
+    cursor: pointer;
+}
+button[onclick]:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+button[download]::before{
+    content: "";
+}
 </style>
 <div class=outer>
 <div id=blocks class=inner>
