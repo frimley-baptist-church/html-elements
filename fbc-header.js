@@ -233,7 +233,6 @@ button{
     font-size: 12pt;
     padding: 0 1ch;
     margin-left: 1em;
-    cursor: pointer;
 }
 button[onclick]:hover{
     background-color: whitesmoke;
