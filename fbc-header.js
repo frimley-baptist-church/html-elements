@@ -224,6 +224,7 @@ div.proto{
 }
 span.buttons{
     float: right;
+    position: relative;
 }
 button{
     background-color: white;
@@ -233,6 +234,8 @@ button{
     font-size: 12pt;
     padding: 0 1ch;
     margin-left: 1em;
+    position: relative;
+    top: -1px;
 }
 button[onclick]:hover{
     background-color: whitesmoke;
