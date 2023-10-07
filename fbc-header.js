@@ -262,7 +262,7 @@ button[download]::before{
 -->
 </div>
 <div id=app class=inner>${this.app}</div>
-<div id=subtitle class=inner></div>
+<div id=subtitle class=inner><span></span><slot name="buttons"></slot></div>
 <div id=help title="Help" class=inner>
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
 	<title>
@@ -332,7 +332,7 @@ button[download]::before{
             } else if (name.slice(0,4) == 'help') {
                 _helpon()
             } else {
-                const node = this.shadowRoot.getElementById(name)
+                const node = this.shadowRoot.getElementById(`${name} span`)
                 if (name != 'userinfo' && typeof (node) !== "undefined") node.innerHTML = newvalue
             }
             if (name == 'userid') {
