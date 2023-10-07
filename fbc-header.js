@@ -332,7 +332,7 @@ button[download]::before{
             } else if (name.slice(0,4) == 'help') {
                 _helpon()
             } else {
-                const node = this.shadowRoot.getElementById(`${name} span`)
+                const node = this.shadowRoot.querySelector(`#${name} span`)
                 if (name != 'userinfo' && typeof (node) !== "undefined") node.innerHTML = newvalue
             }
             if (name == 'userid') {
